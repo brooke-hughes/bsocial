@@ -70,12 +70,14 @@
           </div>
         </div>
       </div>
-      <form class="contact-form fade-in" onsubmit="event.preventDefault(); this.innerHTML='<p style=\'text-align:center;padding:3rem 0;color:var(--accent);font-weight:600;font-size:1.1rem\'>Thanks! We\'ll be in touch within 24 hours.</p>';">
+      <form class="contact-form fade-in" action="https://formspree.io/f/mdappwoy" method="POST">
         <input type="text" name="name" placeholder="Your name" required />
         <input type="email" name="email" placeholder="Email address" required />
         <input type="text" name="business" placeholder="Business name" />
         <input type="text" name="website" placeholder="Website URL (optional)" />
         <textarea name="message" placeholder="Tell us about your brand, what you're looking for, and any goals you have in mind..."></textarea>
+        <input type="hidden" name="_subject" value="New Lead from bsocialdigital.com" />
+        <input type="hidden" name="_next" value="https://bsocialdigital.com/contact.html?sent=1" />
         <button class="btn btn-primary" type="submit" style="width: 100%;">Send Message</button>
       </form>
     </div>
@@ -88,6 +90,9 @@
   </footer>
 
   <script>
+    if (window.location.search.includes('sent=1')) {
+      document.querySelector('.contact-form').innerHTML = '<p style="text-align:center;padding:3rem 0;color:var(--accent);font-weight:600;font-size:1.1rem">Thanks! We\'ll be in touch within 24 hours.</p>';
+    }
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.1 });
