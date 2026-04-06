@@ -248,23 +248,23 @@
 
     .process-step .doodle-icon {
       position: absolute;
-      top: 1.25rem;
-      right: 1.25rem;
-      width: 28px;
-      height: 28px;
-      opacity: 0.2;
-      transition: opacity 0.3s;
+      top: -14px;
+      right: 1.5rem;
+      font-size: 1.6rem;
+      background: var(--bg);
+      padding: 0 0.4rem;
+      transition: transform 0.3s;
     }
 
     .process-step:hover .doodle-icon {
-      opacity: 0.5;
+      transform: rotate(-10deg) scale(1.2);
     }
 
     /* ── Hand-drawn doodles ── */
     .doodle {
       display: block;
       margin: 0 auto;
-      opacity: 0.15;
+      opacity: 0.3;
     }
 
     .doodle-inline {
@@ -858,33 +858,25 @@
     <h2 class="fade-in">The B Social Method</h2>
     <div class="process-grid fade-in">
       <div class="process-step">
-        <svg class="doodle-icon" viewBox="0 0 40 40" fill="none" stroke="var(--pop)" stroke-width="1.2" stroke-linecap="round">
-          <circle cx="18" cy="18" r="9" stroke-dasharray="3 2"/><path d="M25 25 Q28 28 33 33"/><path d="M14 15 Q16 12 20 14" opacity="0.5"/>
-        </svg>
+        <span class="doodle-icon">🔍</span>
         <div class="step-num">01</div>
         <h3>Stalk (Nicely)</h3>
         <p>We deep-dive into your brand, your competitors, and your audience. Think of it as strategic snooping &mdash; we find what's working, what's not, and what everyone else is missing.</p>
       </div>
       <div class="process-step">
-        <svg class="doodle-icon" viewBox="0 0 40 40" fill="none" stroke="var(--rose)" stroke-width="1.2" stroke-linecap="round">
-          <path d="M8 8 Q10 6 14 8 L32 8 Q34 8 34 10 L34 30 Q34 32 32 32 L10 32 Q8 32 8 30 Z" stroke-dasharray="3 2"/><path d="M14 16 L28 16 M14 21 L24 21 M14 26 L20 26" opacity="0.5"/>
-        </svg>
+        <span class="doodle-icon">♟️</span>
         <div class="step-num">02</div>
         <h3>Game Plan</h3>
         <p>No recycled playbooks here. We build a custom strategy around your goals, your budget, and your people &mdash; not some other brand's leftovers.</p>
       </div>
       <div class="process-step">
-        <svg class="doodle-icon" viewBox="0 0 40 40" fill="none" stroke="var(--pop)" stroke-width="1.2" stroke-linecap="round">
-          <path d="M20 34 L20 10 Q20 6 20 4" stroke-dasharray="3 2"/><path d="M14 12 L20 4 L26 12"/><path d="M12 34 Q16 30 20 34 Q24 38 28 34" opacity="0.5"/>
-        </svg>
+        <span class="doodle-icon">⚡</span>
         <div class="step-num">03</div>
         <h3>Go Live</h3>
         <p>We launch fast and watch the data like hawks. You'll always know exactly what's running, what it's costing, and why we're doing it.</p>
       </div>
       <div class="process-step">
-        <svg class="doodle-icon" viewBox="0 0 40 40" fill="none" stroke="var(--rose)" stroke-width="1.2" stroke-linecap="round">
-          <path d="M6 32 Q12 28 18 22 Q24 16 30 8" stroke-dasharray="3 2"/><path d="M24 8 L30 8 L30 14"/><path d="M8 28 Q14 26 16 20" opacity="0.3"/><circle cx="30" cy="8" r="2" fill="var(--rose)" opacity="0.3"/>
-        </svg>
+        <span class="doodle-icon">🔬</span>
         <div class="step-num">04</div>
         <h3>Obsess &amp; Improve</h3>
         <p>We don't "set it and forget it" &mdash; we test, tweak, and optimize every single week. Your ads should get better with age, like fine wine (or us).</p>
