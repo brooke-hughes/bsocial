@@ -246,6 +246,44 @@
       line-height: 1.65;
     }
 
+    .process-step .doodle-icon {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      width: 28px;
+      height: 28px;
+      opacity: 0.2;
+      transition: opacity 0.3s;
+    }
+
+    .process-step:hover .doodle-icon {
+      opacity: 0.5;
+    }
+
+    /* ── Hand-drawn doodles ── */
+    .doodle {
+      display: block;
+      margin: 0 auto;
+      opacity: 0.15;
+    }
+
+    .doodle-inline {
+      display: inline-block;
+      vertical-align: middle;
+      opacity: 0.3;
+    }
+
+    .doodle-section-break {
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .doodle-arrow-down {
+      display: block;
+      margin: -1rem auto 0;
+      opacity: 0.18;
+    }
+
     .process-step:nth-child(even) .step-num {
       color: var(--rose);
     }
@@ -440,7 +478,7 @@
     /* ── Testimonial ── */
     .testimonial-section {
       padding: 8rem 2rem;
-      background: linear-gradient(135deg, rgba(155, 126, 200, 0.06) 0%, rgba(244, 240, 234, 0) 60%);
+      background: linear-gradient(135deg, rgba(140, 58, 75, 0.05) 0%, rgba(244, 240, 234, 0) 60%);
     }
 
     .testimonial-inner {
@@ -820,26 +858,44 @@
     <h2 class="fade-in">The B Social Method</h2>
     <div class="process-grid fade-in">
       <div class="process-step">
+        <svg class="doodle-icon" viewBox="0 0 40 40" fill="none" stroke="var(--pop)" stroke-width="1.2" stroke-linecap="round">
+          <circle cx="18" cy="18" r="9" stroke-dasharray="3 2"/><path d="M25 25 Q28 28 33 33"/><path d="M14 15 Q16 12 20 14" opacity="0.5"/>
+        </svg>
         <div class="step-num">01</div>
         <h3>Stalk (Nicely)</h3>
         <p>We deep-dive into your brand, your competitors, and your audience. Think of it as strategic snooping &mdash; we find what's working, what's not, and what everyone else is missing.</p>
       </div>
       <div class="process-step">
+        <svg class="doodle-icon" viewBox="0 0 40 40" fill="none" stroke="var(--rose)" stroke-width="1.2" stroke-linecap="round">
+          <path d="M8 8 Q10 6 14 8 L32 8 Q34 8 34 10 L34 30 Q34 32 32 32 L10 32 Q8 32 8 30 Z" stroke-dasharray="3 2"/><path d="M14 16 L28 16 M14 21 L24 21 M14 26 L20 26" opacity="0.5"/>
+        </svg>
         <div class="step-num">02</div>
         <h3>Game Plan</h3>
         <p>No recycled playbooks here. We build a custom strategy around your goals, your budget, and your people &mdash; not some other brand's leftovers.</p>
       </div>
       <div class="process-step">
+        <svg class="doodle-icon" viewBox="0 0 40 40" fill="none" stroke="var(--pop)" stroke-width="1.2" stroke-linecap="round">
+          <path d="M20 34 L20 10 Q20 6 20 4" stroke-dasharray="3 2"/><path d="M14 12 L20 4 L26 12"/><path d="M12 34 Q16 30 20 34 Q24 38 28 34" opacity="0.5"/>
+        </svg>
         <div class="step-num">03</div>
         <h3>Go Live</h3>
         <p>We launch fast and watch the data like hawks. You'll always know exactly what's running, what it's costing, and why we're doing it.</p>
       </div>
       <div class="process-step">
+        <svg class="doodle-icon" viewBox="0 0 40 40" fill="none" stroke="var(--rose)" stroke-width="1.2" stroke-linecap="round">
+          <path d="M6 32 Q12 28 18 22 Q24 16 30 8" stroke-dasharray="3 2"/><path d="M24 8 L30 8 L30 14"/><path d="M8 28 Q14 26 16 20" opacity="0.3"/><circle cx="30" cy="8" r="2" fill="var(--rose)" opacity="0.3"/>
+        </svg>
         <div class="step-num">04</div>
         <h3>Obsess &amp; Improve</h3>
         <p>We don't "set it and forget it" &mdash; we test, tweak, and optimize every single week. Your ads should get better with age, like fine wine (or us).</p>
       </div>
     </div>
+  </div>
+
+  <div class="doodle-section-break">
+    <svg class="doodle" width="120" height="20" viewBox="0 0 120 20" fill="none" stroke="var(--rose)" stroke-width="1.2" stroke-linecap="round">
+      <path d="M10 10 Q25 2 40 10 Q55 18 70 10 Q85 2 100 10 Q107 14 110 10"/>
+    </svg>
   </div>
 
   <!-- Services -->
@@ -925,6 +981,13 @@
     </div>
   </div>
 
+  <div class="doodle-section-break">
+    <svg class="doodle" width="60" height="30" viewBox="0 0 60 30" fill="none" stroke="var(--pop)" stroke-width="1" stroke-linecap="round">
+      <path d="M20 5 L22 3 L24 5 M28 3 L30 5 L32 3 M36 5 L38 3 L40 5" opacity="0.6"/>
+      <path d="M15 15 Q22 10 30 15 Q38 20 45 15" stroke-dasharray="2 2"/>
+    </svg>
+  </div>
+
   <!-- Meet the Founders -->
   <div class="founders-section">
     <div class="founders-inner fade-in">
@@ -948,6 +1011,9 @@
         Almost a year ago our company was experiencing a lot of strategic problems when it came to our advertising on META. That was when we decided to reach out to Brooke and hire her directly to manage our META ads account. Since she has taken over, we have consistently met or exceeded goals. I couldn't recommend her help enough.
       </blockquote>
       <cite>John Macko, Sell GPU</cite>
+      <svg width="60" height="20" viewBox="0 0 60 20" fill="none" stroke="var(--rose)" stroke-width="1" stroke-linecap="round" style="margin-top:1.25rem;opacity:0.25;">
+        <path d="M10 10 L12 6 L14 10 L10 8 L14 8 Z"/><path d="M28 8 L29 5 L30 8 L28 7 L30 7 Z"/><path d="M46 10 L48 6 L50 10 L46 8 L50 8 Z"/>
+      </svg>
     </div>
   </div>
 
@@ -983,6 +1049,9 @@
       <p class="section-label">Ready?</p>
       <h2>Let's figure out what's <em>possible</em></h2>
       <p>Book a free strategy call &mdash; no pitch deck, no pressure. Just a real conversation about your brand and where you want to go.</p>
+      <svg class="doodle-arrow-down" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" style="opacity:0.3;margin:1rem auto 0.5rem;">
+        <path d="M15 4 Q14 14 15 22"/><path d="M9 18 L15 25 L21 18"/>
+      </svg>
       <a class="btn" href="contact.html" style="background:#fff;color:var(--pop);border-color:#fff;">Book a Free Call</a>
     </div>
   </div>
