@@ -79,6 +79,10 @@
         <textarea name="message" placeholder="Tell us about your brand, what you're looking for, and any goals you have in mind..."></textarea>
         <button class="btn btn-primary" type="submit" style="width: 100%;">Send Message</button>
       </form>
+      <div style="text-align:center;margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border);">
+        <p style="color:var(--muted);font-size:0.9rem;margin-bottom:1rem;">Prefer to skip the form and just chat?</p>
+        <a class="btn btn-secondary" href="https://calendly.com/letsbsocial_/30min" target="_blank" rel="noopener" style="display:inline-block;">Book a Free 30-Min Call</a>
+      </div>
     </div>
   </div>
 
@@ -114,6 +118,7 @@
       // Send to Google Sheets
       fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
+        headers: { 'Content-Type': 'text/plain' },
         body: JSON.stringify(data),
         mode: 'no-cors'
       });

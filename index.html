@@ -999,6 +999,7 @@
       // Send to Google Sheets
       fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
+        headers: { 'Content-Type': 'text/plain' },
         body: JSON.stringify({ email: email, source: 'checklist' }),
         mode: 'no-cors'
       });

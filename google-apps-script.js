@@ -1,44 +1,39 @@
 // ============================================
 // PASTE THIS INTO GOOGLE APPS SCRIPT EDITOR
 // (Extensions → Apps Script in your Google Sheet)
+// Then: Deploy → New Deployment → Web App
+//   Execute as: Me
+//   Who has access: Anyone
 // ============================================
 
 function doPost(e) {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-  var data = JSON.parse(e.postData.contents);
+  try {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    var data = JSON.parse(e.postData.contents);
 
-  sheet.appendRow([
-    new Date(),                          // Timestamp
-    data.name || '',                     // Name
-    data.email || '',                    // Email
-    data.company || '',                  // Company
-    data.message || '',                  // Message
-    data.source || 'Unknown'             // Source (checklist or contact)
-  ]);
+    sheet.appendRow([
+      new Date(),                          // Timestamp
+      data.name || '',                     // Name
+      data.email || '',                    // Email
+      data.company || '',                  // Company
+      data.message || '',                  // Message
+      data.source || 'Unknown'             // Source (checklist or contact)
+    ]);
 
-  // Optional: send yourself an email notification
-  if (data.source === 'contact') {
-    MailApp.sendEmail({
-      to: 'brooke@bsocialdigital.com',
-      subject: 'New Lead from B Social Website — ' + (data.name || 'Unknown'),
-      body: 'Name: ' + (data.name || '') + '\n' +
-            'Email: ' + (data.email || '') + '\n' +
-            'Company: ' + (data.company || '') + '\n' +
-            'Message: ' + (data.message || '') + '\n' +
-            'Source: ' + (data.source || '')
-    });
+    return ContentService
+      .createTextOutput(JSON.stringify({ result: 'success' }))
+      .setMimeType(ContentService.MimeType.JSON);
+
+  } catch (err) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ result: 'error', error: err.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
   }
+}
 
-  if (data.source === 'checklist') {
-    MailApp.sendEmail({
-      to: 'brooke@bsocialdigital.com',
-      subject: 'New Checklist Download — ' + (data.email || 'Unknown'),
-      body: 'Someone downloaded the Ad Account Audit Checklist!\n\n' +
-            'Email: ' + (data.email || '')
-    });
-  }
-
+// This handles GET requests too (useful for testing)
+function doGet(e) {
   return ContentService
-    .createTextOutput(JSON.stringify({ result: 'success' }))
-    .setMimeType(ContentService.MimeType.JSON);
+    .createTextOutput('B Social Leads script is running!')
+    .setMimeType(ContentService.MimeType.TEXT);
 }
