@@ -10,6 +10,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <style>
+    /* ── Squiggle underline ── */
+    .squiggle {
+      position: relative;
+      display: inline-block;
+    }
+
+    .squiggle::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -4px;
+      height: 8px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 8' preserveAspectRatio='none'%3E%3Cpath d='M0,5 Q5,0 10,5 Q15,10 20,5 Q25,0 30,5 Q35,10 40,5' fill='none' stroke='%238C3A4B' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: repeat-x;
+      background-size: 20px 8px;
+    }
+
+    /* Bigger squiggle for headings */
+    h1 .squiggle::after,
+    h2 .squiggle::after {
+      bottom: -6px;
+      height: 12px;
+      background-size: 28px 12px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 8' preserveAspectRatio='none'%3E%3Cpath d='M0,5 Q5,0 10,5 Q15,10 20,5 Q25,0 30,5 Q35,10 40,5' fill='none' stroke='%238C3A4B' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    }
+
+    /* Green squiggle variant */
+    .squiggle-green::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 8' preserveAspectRatio='none'%3E%3Cpath d='M0,5 Q5,0 10,5 Q15,10 20,5 Q25,0 30,5 Q35,10 40,5' fill='none' stroke='%235DA644' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    }
+
+    h1 .squiggle-green::after,
+    h2 .squiggle-green::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 8' preserveAspectRatio='none'%3E%3Cpath d='M0,5 Q5,0 10,5 Q15,10 20,5 Q25,0 30,5 Q35,10 40,5' fill='none' stroke='%235DA644' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    }
+
     /* ── Hero ── */
     .hero {
       padding: 4.5rem 2rem 3rem;
@@ -779,7 +816,7 @@
     <div class="hero-text">
       <p class="hero-sub fade-in">Digital Marketing Agency</p>
       <h1 class="fade-in">
-        your brand deserves<span class="line-break"></span><span class="line-two">better ads</span>
+        your brand deserves<span class="line-break"></span><span class="line-two squiggle">better ads</span>
       </h1>
       <p class="hero-intro fade-in">
         We run your ads and obsess over your numbers so you can focus on <em>running your business.</em>
@@ -853,7 +890,7 @@
   <!-- The B Social Method -->
   <div class="process-section">
     <p class="section-label fade-in">How We Work</p>
-    <h2 class="fade-in">The B Social Method</h2>
+    <h2 class="fade-in">The B Social <span class="squiggle squiggle-green">Method</span></h2>
     <div class="process-grid fade-in">
       <div class="process-step">
         <svg class="doodle-icon" viewBox="0 0 80 80" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -984,7 +1021,7 @@
   <!-- Services -->
   <div class="section">
     <p class="section-label fade-in">What We Do</p>
-    <h2 class="fade-in">We focus on what <em>actually</em> moves the needle</h2>
+    <h2 class="fade-in">We focus on what <em class="squiggle">actually</em> moves the needle</h2>
     <div class="services-grid fade-in">
       <div class="service-cell">
         <div class="svc-icon">
@@ -1083,7 +1120,7 @@
       </div>
       <div class="founders-text">
         <p class="founders-label">Meet Us</p>
-        <h2>The sisters behind <em>the strategy</em></h2>
+        <h2>The sisters behind <em class="squiggle">the strategy</em></h2>
         <p>We're the ones in your ad account every day &mdash; no hand-offs, no junior teams, no waiting weeks for a report that should take minutes.</p>
         <p class="founders-sig">&mdash; Brooke &amp; team</p>
       </div>
@@ -1134,7 +1171,7 @@
   <div class="section">
     <div class="cta-section fade-in">
       <p class="section-label">Ready?</p>
-      <h2>Let's figure out what's <em>possible</em></h2>
+      <h2>Let's figure out what's <em class="squiggle">possible</em></h2>
       <p>Book a free strategy call &mdash; no pitch deck, no pressure. Just a real conversation about your brand and where you want to go.</p>
       <svg class="doodle-arrow-down" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" style="opacity:0.3;margin:1rem auto 0.5rem;">
         <path d="M15 4 Q14 14 15 22"/><path d="M9 18 L15 25 L21 18"/>
