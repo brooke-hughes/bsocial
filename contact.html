@@ -71,14 +71,12 @@
           </div>
         </div>
       </div>
-      <form class="contact-form fade-in" action="https://formspree.io/f/mdappwoy" method="POST">
+      <form class="contact-form fade-in" id="contactForm">
         <input type="text" name="name" placeholder="Your name" required />
         <input type="email" name="email" placeholder="Email address" required />
         <input type="text" name="business" placeholder="Business name" />
         <input type="text" name="website" placeholder="Website URL (optional)" />
         <textarea name="message" placeholder="Tell us about your brand, what you're looking for, and any goals you have in mind..."></textarea>
-        <input type="hidden" name="_subject" value="New Lead from bsocialdigital.com" />
-        <input type="hidden" name="_next" value="https://bsocialdigital.com/contact.html?sent=1" />
         <button class="btn btn-primary" type="submit" style="width: 100%;">Send Message</button>
       </form>
     </div>
@@ -91,9 +89,54 @@
   </footer>
 
   <script>
+    // REPLACE THIS URL after deploying your Google Apps Script
+    var GOOGLE_SCRIPT_URL = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+
     if (window.location.search.includes('sent=1')) {
       document.querySelector('.contact-form').innerHTML = '<p style="text-align:center;padding:3rem 0;color:var(--accent);font-weight:600;font-size:1.1rem">Thanks! We\'ll be in touch within 24 hours.</p>';
     }
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = e.target;
+      var btn = form.querySelector('button');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      var data = {
+        name: form.name.value,
+        email: form.email.value,
+        company: form.business.value,
+        message: form.message.value,
+        source: 'contact'
+      };
+
+      // Send to Google Sheets
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        mode: 'no-cors'
+      });
+
+      // Also send to Formspree for email backup
+      fetch('https://formspree.io/f/mdappwoy', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          business: data.company,
+          message: data.message,
+          _subject: 'New Lead from bsocialdigital.com'
+        })
+      });
+
+      // Redirect after short delay
+      setTimeout(function() {
+        window.location.href = 'contact.html?sent=1';
+      }, 800);
+    });
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.1 });

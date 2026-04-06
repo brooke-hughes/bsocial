@@ -953,10 +953,7 @@
           <li>Budget allocation red flags to look for</li>
           <li>Quick wins you can fix today</li>
         </ul>
-        <form class="freebie-form" action="https://formspree.io/f/mdappwoy" method="POST">
-          <input type="hidden" name="_subject" value="New Checklist Download Request" />
-          <input type="hidden" name="_next" value="https://bsocialdigital.com/checklist-thanks.html" />
-          <input type="hidden" name="form_type" value="checklist_download" />
+        <form class="freebie-form" id="checklistForm">
           <input type="email" name="email" placeholder="Your email" required />
           <button type="submit" class="btn btn-primary" style="white-space:nowrap;">Send It</button>
         </form>
@@ -986,6 +983,39 @@
   </footer>
 
   <script>
+    // REPLACE THIS URL after deploying your Google Apps Script
+    var GOOGLE_SCRIPT_URL = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+
+    /* ── Checklist form submission ── */
+    document.getElementById('checklistForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = e.target;
+      var btn = form.querySelector('button');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      var email = form.email.value;
+
+      // Send to Google Sheets
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        body: JSON.stringify({ email: email, source: 'checklist' }),
+        mode: 'no-cors'
+      });
+
+      // Also send to Formspree
+      fetch('https://formspree.io/f/mdappwoy', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, _subject: 'New Checklist Download Request', form_type: 'checklist_download' })
+      });
+
+      // Redirect to thank you page
+      setTimeout(function() {
+        window.location.href = 'checklist-thanks.html';
+      }, 800);
+    });
+
     /* ── Fade-in on scroll ── */
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
