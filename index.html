@@ -10,24 +10,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* ── Squiggle underline ── */
-    .squiggle {
-      position: relative;
-      display: inline-block;
-      padding-bottom: 6px;
-    }
-
-    .squiggle::after {
+    /* ── Squiggle accent under section labels ── */
+    .section-label::after {
       content: '';
-      position: absolute;
-      left: 2px;
-      right: 2px;
-      bottom: -2px;
-      height: 6px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8'%3E%3Cpath d='M2,6 C10,6 14,2 22,2 C30,2 34,6 42,6 C50,6 54,2 62,2 C70,2 74,6 82,6 C90,6 94,2 102,2 C110,2 114,6 118,6' fill='none' stroke='%238C3A4B' stroke-width='1.5' stroke-linecap='round' opacity='0.7'/%3E%3C/svg%3E");
-      background-repeat: repeat-x;
-      background-size: 60px 6px;
-      background-position: center;
+      display: block;
+      width: 40px;
+      height: 5px;
+      margin-top: 0.5rem;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 6'%3E%3Cpath d='M2,4 C10,4 14,1.5 22,1.5 C30,1.5 34,4 42,4 C50,4 54,1.5 62,1.5 C70,1.5 74,4 78,4' fill='none' stroke='%238C3A4B' stroke-width='1.2' stroke-linecap='round' opacity='0.5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: contain;
     }
 
     /* ── Hero ── */
@@ -465,7 +457,7 @@
       font-weight: 600;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--pop);
+      color: var(--rose);
       margin-bottom: 1rem;
     }
 
@@ -799,7 +791,7 @@
     <div class="hero-text">
       <p class="hero-sub fade-in">Digital Marketing Agency</p>
       <h1 class="fade-in">
-        your brand deserves<span class="line-break"></span><span class="line-two squiggle">better ads</span>
+        your brand deserves<span class="line-break"></span><span class="line-two">better ads</span>
       </h1>
       <p class="hero-intro fade-in">
         We run your ads and obsess over your numbers so you can focus on <em>running your business.</em>
@@ -1154,7 +1146,7 @@
   <div class="section">
     <div class="cta-section fade-in">
       <p class="section-label">Ready?</p>
-      <h2>Let's figure out what's <em class="squiggle">possible</em></h2>
+      <h2>Let's figure out what's <em>possible</em></h2>
       <p>Book a free strategy call &mdash; no pitch deck, no pressure. Just a real conversation about your brand and where you want to go.</p>
       <svg class="doodle-arrow-down" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" style="opacity:0.3;margin:1rem auto 0.5rem;">
         <path d="M15 4 Q14 14 15 22"/><path d="M9 18 L15 25 L21 18"/>

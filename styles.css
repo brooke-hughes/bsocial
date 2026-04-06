@@ -140,7 +140,7 @@ nav {
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--rose);
   margin-bottom: 1rem;
 }
 
@@ -316,7 +316,7 @@ footer span { color: var(--gold); }
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--rose);
   margin-bottom: 0.4rem;
 }
 
