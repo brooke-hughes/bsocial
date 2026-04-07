@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing for Wellness Brands — B Social Digital Marketing</title>
+  <meta name="description" content="Digital marketing for wellness businesses — saunas, spas, yoga studios, float therapy, and cryotherapy. Google Ads, Meta Ads, and SEO to fill your rooms with clients ready to book." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .page-hero {
+      padding: 8rem 2rem 5rem;
+      max-width: var(--max);
+      margin: 0 auto;
+      margin-top: 64px;
+      text-align: center;
+    }
+
+    .page-hero h1 { margin-bottom: 1rem; }
+
+    .page-hero p {
+      color: var(--muted);
+      max-width: 580px;
+      font-size: 1.1rem;
+      margin: 0 auto 2.5rem;
+    }
+
+    /* Problem section */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .problem-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .problem-card .icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .problem-card h3 {
+      font-family: 'Archivo', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .problem-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Solution cards */
+    .solution-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .solution-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      transition: border-color 0.3s;
+    }
+
+    .solution-card:hover { border-color: var(--accent); }
+
+    .solution-card .number {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: var(--accent2);
+      margin-bottom: 0.75rem;
+    }
+
+    .solution-card h3 {
+      font-family: 'Archivo', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .solution-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Urgency callout */
+    .urgency-banner {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+
+    .urgency-banner h2 { margin-bottom: 1rem; }
+    .urgency-banner p { color: var(--muted); max-width: 560px; margin: 0 auto 2rem; line-height: 1.8; }
+
+    /* Who it's for */
+    .for-list {
+      list-style: none;
+      max-width: 600px;
+      margin: 2rem auto 0;
+    }
+
+    .for-list li {
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .for-list li::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* CTA */
+    .cta-banner {
+      background: var(--pop);
+      border: none;
+      border-radius: var(--radius);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .cta-banner .section-label { color: rgba(255,255,255,0.7); }
+    .cta-banner h2 { color: #fff; margin-bottom: 1rem; }
+    .cta-banner h2 em { color: rgba(255,255,255,0.85); }
+    .cta-banner p { color: rgba(255,255,255,0.8); max-width: 480px; margin: 0 auto 2rem; }
+
+    .cta-banner .btn {
+      background: #fff;
+      color: var(--pop);
+      border-color: #fff;
+    }
+
+    .cta-banner .btn:hover { opacity: 0.9; }
+
+    @media (max-width: 768px) {
+      .problem-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo"><img src="../logo.png" alt="bsocial." /></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+    <div class="nav-links">
+      <a href="../services.html">Services</a>
+      <a href="../about.html">Our Story</a>
+      <a href="../case-studies.html">Case Studies</a>
+      <a href="../bridal.html">Bridal &amp; Events</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../contact.html" class="nav-cta">Work With Us</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="page-hero">
+    <p class="section-label fade-in">For Wellness Brands</p>
+    <h1 class="fade-in">Your space creates the <em>experience</em>.<br />We'll fill the <em>rooms</em>.</h1>
+    <p class="fade-in">
+      Digital marketing built for saunas, spas, yoga studios, float therapy centers, and wellness brands. We help you show up when local clients are searching &mdash; and turn them into members.
+    </p>
+    <div class="btn-row fade-in" style="justify-content: center;">
+      <a class="btn btn-primary" href="../contact.html">Book a Free Strategy Call</a>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- The Problem -->
+  <div class="section">
+    <p class="section-label fade-in">The Problem</p>
+    <h2 class="fade-in">Great wellness spaces that <em>struggle</em> to stay full</h2>
+    <p class="section-intro fade-in">You've invested in the experience &mdash; the ambiance, the equipment, the vibe. But without a strategy to get found online, the rooms stay empty.</p>
+    <div class="problem-grid">
+      <div class="problem-card fade-in">
+        <h3>Relying on Instagram alone</h3>
+        <p>You're posting consistently but have no paid strategy behind it. Organic reach keeps shrinking, and followers aren't converting into paying clients.</p>
+      </div>
+      <div class="problem-card fade-in">
+        <h3>Losing to bigger budgets</h3>
+        <p>Competitors with larger marketing budgets are showing up first in search and social &mdash; stealing potential members who would have loved your space.</p>
+      </div>
+      <div class="problem-card fade-in">
+        <h3>No path from follower to client</h3>
+        <p>You have an audience online but no strategy to turn followers into booked sessions, memberships, or intro offers.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Urgency -->
+  <div class="section">
+    <div class="urgency-banner fade-in">
+      <p class="section-label">Why This Matters</p>
+      <h2>Wellness is booming.<br />But so is the <em>competition</em>.</h2>
+      <p>
+        The wellness industry is growing fast, and so is the number of studios fighting for the same local clients. People are searching "sauna near me," "float therapy near me," and "yoga studio near me" with high intent &mdash; ready to book right now. If your brand isn't the one they find, they'll walk into a competitor's space instead of yours.
+      </p>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- How We Help -->
+  <div class="section">
+    <p class="section-label fade-in">How We Help</p>
+    <h2 class="fade-in">We put your brand in front of clients <em>ready to book</em></h2>
+    <div class="solution-grid">
+      <div class="solution-card fade-in">
+        <div class="number">01</div>
+        <h3>Google Ads</h3>
+        <p>Capture high-intent local searches like "sauna near me" and "float therapy [city]." We build campaigns around your services so you show up first when people are ready to book.</p>
+      </div>
+      <div class="solution-card fade-in">
+        <div class="number">02</div>
+        <h3>Meta Ads</h3>
+        <p>Showcase your space, memberships, and intro offers on Instagram and Facebook. Scroll-stopping creative that drives bookings &mdash; from first visit to loyal member.</p>
+      </div>
+      <div class="solution-card fade-in">
+        <div class="number">03</div>
+        <h3>SEO</h3>
+        <p>Own your local market long-term. We build your organic presence so your studio ranks at the top when people search for wellness services in your area.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Who it's for -->
+  <div class="section" style="text-align: center;">
+    <p class="section-label fade-in">Who This Is For</p>
+    <h2 class="fade-in">Built for brands in the <em>wellness space</em></h2>
+    <ul class="for-list fade-in">
+      <li>Sauna studios (like our client Sek Sauna Studio)</li>
+      <li>Yoga &amp; pilates studios</li>
+      <li>Float therapy centers</li>
+      <li>Cryotherapy clinics</li>
+      <li>Day spas</li>
+      <li>Wellness membership clubs</li>
+    </ul>
+  </div>
+
+  <!-- CTA -->
+  <div class="section">
+    <div class="cta-banner fade-in">
+      <p class="section-label">Let's Fill Your Rooms</p>
+      <h2>Ready to turn searches into <em>sessions</em>?</h2>
+      <p>Book a free strategy call and we'll map out exactly how to get your wellness brand in front of clients who are ready to book.</p>
+      <a class="btn" href="../contact.html">Book a Free Strategy Call</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 <span>B Social</span> Digital Marketing &middot; All rights reserved.</p>
+    <p style="margin-top:0.75rem;"><a href="https://www.instagram.com/bsocial_digitalmarketing/" target="_blank" rel="noopener" style="color:var(--pop);font-weight:500;">@bsocial_digitalmarketing</a> &nbsp;&middot;&nbsp; <a href="https://www.tiktok.com/@brooketheadsgirl" target="_blank" rel="noopener" style="color:var(--pop);font-weight:500;">@brooketheadsgirl</a></p>
+    <p style="margin-top:0.5rem;font-size:0.7rem;color:var(--muted);">built on matcha &amp; ambition &#x1F375;</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
