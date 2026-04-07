@@ -156,12 +156,19 @@ nav {
     padding: 0 0 0 1rem;
     min-width: auto;
     background: transparent;
+    display: none;
   }
-  .nav-dropdown:hover .nav-dropdown-menu,
-  .nav-dropdown .nav-dropdown-menu {
+  .nav-dropdown.open .nav-dropdown-menu {
     display: block;
   }
-  .nav-dropdown > a::after { content: ''; }
+  .nav-dropdown > a::after {
+    content: ' +';
+    font-size: 0.7rem;
+    opacity: 0.5;
+  }
+  .nav-dropdown.open > a::after {
+    content: ' −';
+  }
 }
 
 /* ── Marquee ── */
