@@ -83,6 +83,8 @@ nav {
 /* Nav dropdown */
 .nav-dropdown {
   position: relative;
+  padding: 1.5rem 0;
+  margin: -1.5rem 0;
 }
 
 .nav-dropdown > a {
@@ -101,7 +103,7 @@ nav {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 0.75rem;
+  margin-top: 0;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
